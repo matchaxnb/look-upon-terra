@@ -1,0 +1,12 @@
+include:
+  - project: sennder/engineering-effectiveness/platform/sennder-gitlab-templates
+    file: python-publish-registry.yml
+
+stages: [build]
+
+prepare_pip:
+  extends: .prepare_pip
+build_twine:
+  extends: .twine_build_and_push
+  variables:
+    PACKAGE_PATH: .

@@ -4,4 +4,4 @@ Jinja2
 Flask
 beautifulsoup4
 ply>=3.11
-python-hcl2
+python-hcl2>=3.0.2
