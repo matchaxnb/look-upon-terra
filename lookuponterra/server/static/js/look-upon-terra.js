@@ -2,7 +2,7 @@
 // terraform-graph.js
 //
 
-// enumerate the various kinds of edges that Blast Radius understands.
+// enumerate the various kinds of edges that Look Upon Terra understands.
 // only NORMAL and LAYOUT_SHOWN will show up in the <SVG>, but all four
 // will likely appear in the json representation.
 var edge_types = {

@@ -1,15 +1,15 @@
-# Blast Radius
+# Look Upon Terra
 
 [![CircleCI](https://circleci.com/gh/28mm/look-upon-terra/tree/master.svg?style=svg)](https://circleci.com/gh/28mm/look-upon-terra/tree/master)
-[![PyPI version](https://badge.fury.io/py/BlastRadius.svg)](https://badge.fury.io/py/BlastRadius)
+[![PyPI version](https://badge.fury.io/py/LookUponTerra.svg)](https://badge.fury.io/py/LookUponTerra)
 
 [terraform]: https://www.terraform.io/
 [examples]: https://28mm.github.io/look-upon-terra-docs/
 
-_Blast Radius_ is a tool for reasoning about [Terraform][] dependency graphs
+_Look Upon Terra_ is a tool for reasoning about [Terraform][] dependency graphs
 with interactive visualizations.
 
-Use _Blast Radius_ to:
+Use _Look Upon Terra_ to:
 
 * __Learn__ about *Terraform* or one of its providers through real [examples][]
 * __Document__ your infrastructure
@@ -27,14 +27,14 @@ Use _Blast Radius_ to:
 
 ## Quickstart
 
-The fastest way to get up and running with *Blast Radius* is to install it with
+The fastest way to get up and running with *Look Upon Terra* is to install it with
 `pip` to your pre-existing environment:
 
 ```sh
 pip install lookuponterra
 ```
 
-Once installed just point *Blast Radius* at any initialized *Terraform*
+Once installed just point *Look Upon Terra* at any initialized *Terraform*
 directory:
 
 ```sh
@@ -48,7 +48,7 @@ And you will shortly be rewarded with a browser link http://127.0.0.1:5000/.
 [privileges]: https://docs.docker.com/engine/reference/run/#runtime-privilege-and-linux-capabilities
 [overlayfs]: https://wiki.archlinux.org/index.php/Overlay_filesystem
 
-To launch *Blast Radius* for a local directory by manually running:
+To launch *Look Upon Terra* for a local directory by manually running:
 
 ```sh
 docker run --rm -it -p 5000:5000 \
@@ -68,7 +68,7 @@ project root (note `.terraform/modules/<uuid>`). Given these paths will vary
 betwen Docker and the host, we mount the volume as read-only, assuring we don't
 ever interfere with your real environment.
 
-However, in order for *Blast Radius* to actually work with *Terraform*, it needs
+However, in order for *Look Upon Terra* to actually work with *Terraform*, it needs
 to be initialized. To accomplish this, the container creates an [overlayfs][]
 that exists within the container, overlaying your own, so that it can operate
 independently. To do this, certain runtime privileges are required --
@@ -80,7 +80,7 @@ out the [runtime privileges][privileges] documentation.
 #### Docker & Subdirectories
 
 If you organized your *Terraform* project using stacks and modules,
-*Blast Radius* must be called from the project root and reference them as
+*Look Upon Terra* must be called from the project root and reference them as
 subdirectories -- don't forget to prefix `--serve`!
 
 For example, let's create a Terraform `project` with the following:
@@ -98,7 +98,7 @@ $ tree -d
 ```
 
 It consists of 3 modules `foo`, `bar` and `dead`, followed by one `beef` stack.
-To apply *Blast Radius* to the `beef` stack, you would want to run the container
+To apply *Look Upon Terra* to the `beef` stack, you would want to run the container
 with the following:
 
 ```sh
@@ -112,7 +112,7 @@ $ docker run --rm -it -p 5000:5000 \
 
 ## Embedded Figures
 
-You may wish to embed figures produced with *Blast Radius* in other documents.
+You may wish to embed figures produced with *Look Upon Terra* in other documents.
 You will need the following:
 
 1. An `svg` file and `json` document representing the graph and its layout.
@@ -123,13 +123,13 @@ You can read more details in the [documentation](doc/embedded.md)
 
 ## Implementation Details
 
-*Blast Radius* uses the [Graphviz][] package to layout graph diagrams,
+*Look Upon Terra* uses the [Graphviz][] package to layout graph diagrams,
 [python-hcl2](https://github.com/amplify-education/python-hcl2) to parse [Terraform][] configuration,
 and [d3.js](https://d3js.org/) to implement interactive features and animations.
 
 ## Further Reading
 
-The development of *Blast Radius* is documented in a series of
+The development of *Look Upon Terra* is documented in a series of
 [blog](https://28mm.github.io) posts:
 
 * [part 1](https://28mm.github.io/notes/d3-terraform-graphs): motivations, d3 force-directed layouts vs. vanilla graphviz.

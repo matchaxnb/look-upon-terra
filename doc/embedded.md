@@ -1,8 +1,8 @@
 # Embedded Figures
 
-You may wish to embed figures produced with *Blast Radius* in other documents. You will need the following:
+You may wish to embed figures produced with *Look Upon Terra* in other documents. You will need the following:
 
- 1. an `svg` file and `json` document representing the graph and its layout. These are produced with *Blast Radius*, as follows
+ 1. an `svg` file and `json` document representing the graph and its layout. These are produced with *Look Upon Terra*, as follows
 
 ````bash
 [...]$ terraform graph | look-upon-terra --svg > graph.svg
