@@ -1,10 +1,10 @@
 #!/bin/sh
 set -e
 
-# If command starts with an option, prepend the blast-radius.
-if [ "${1}" != "blast-radius" ]; then
+# If command starts with an option, prepend the look-upon-terra.
+if [ "${1}" != "look-upon-terra" ]; then
   if [ -n "${1}" ]; then
-    set -- blast-radius "$@"
+    set -- look-upon-terra "$@"
   fi
 fi
 

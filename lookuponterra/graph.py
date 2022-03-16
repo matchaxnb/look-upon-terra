@@ -8,7 +8,7 @@ from io import StringIO
 import jinja2
 
 # 1st party libraries
-from blastradius.util import Counter
+from lookuponterra.util import Counter
 
 class Graph:
     def __init__(self, nodes, edges):

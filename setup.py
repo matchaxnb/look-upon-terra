@@ -12,7 +12,7 @@ with open("requirements.txt") as f:
     reqs = [l.strip('\n') for l in f if l.strip('\n') and not l.startswith('#')]
 
 setup(
-    name='blastradius',
+    name='lookuponterra',
     version='0.1.25',
     python_requires='>=3.10.0',
     description='Interactive Terraform graph visualizations',
@@ -21,7 +21,7 @@ setup(
     author='Patrick McMurchie',
     author_email='patrick.mcmurchie@gmail.com',
     packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
-    scripts=['bin/blast-radius'],
+    scripts=['bin/look-upon-terra'],
     install_requires=reqs,
     include_package_data=True
 )

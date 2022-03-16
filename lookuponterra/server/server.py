@@ -11,10 +11,10 @@ from flask import request
 import jinja2
 
 # 1st-party libraries
-from blastradius.handlers.dot import DotGraph, Format, DotNode
-from blastradius.handlers.terraform import Terraform
-from blastradius.util import which
-from blastradius.graph import Node, Edge, Counter, Graph
+from lookuponterra.handlers.dot import DotGraph, Format, DotNode
+from lookuponterra.handlers.terraform import Terraform
+from lookuponterra.util import which
+from lookuponterra.graph import Node, Edge, Counter, Graph
 
 app = Flask(__name__)
 

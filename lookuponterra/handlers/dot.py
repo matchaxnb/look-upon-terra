@@ -8,8 +8,8 @@ from collections import deque
 import jinja2
 
 # 1st party libraries
-from blastradius.graph import Graph, Node, Edge
-from blastradius.util import OrderedSet
+from lookuponterra.graph import Graph, Node, Edge
+from lookuponterra.util import OrderedSet
 
 class DotGraph(Graph):
 

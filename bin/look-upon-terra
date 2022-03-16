@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""blast-radius:
+"""look-upon-terra:
   Quick hack to produce clarified terraform graph visualizations."""
 
 # standard libraries
@@ -11,15 +11,15 @@ import os
 import itertools
 
 # 1st party libraries
-from blastradius.handlers.dot import DotGraph, Format, DotNode
-from blastradius.handlers.plan import Plan
-from blastradius.handlers.apply import Apply
-from blastradius.handlers.terraform import Terraform
-from blastradius.server.server import app
+from lookuponterra.handlers.dot import DotGraph, Format, DotNode
+from lookuponterra.handlers.plan import Plan
+from lookuponterra.handlers.apply import Apply
+from lookuponterra.handlers.terraform import Terraform
+from lookuponterra.server.server import app
 
 def main():
 
-    parser = parser = argparse.ArgumentParser(description='blast-radius: Interactive Terraform Graph Visualizations')
+    parser = parser = argparse.ArgumentParser(description='look-upon-terra: Interactive Terraform Graph Visualizations')
     parser.add_argument('directory', type=str, help='terraform configuration directory', default=os.getcwd(), nargs='?')
     parser.add_argument('--port', type=int, help='specify a port other than the default 5000', default=os.getenv('BLAST_RADIUS_PORT',5000))
     

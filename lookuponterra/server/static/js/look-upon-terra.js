@@ -67,7 +67,7 @@ Queue.prototype.dequeue = function() {
 // Takes a unique selector, e.g. "#demo-1", and
 // appends svg xml from svg_url, and takes graph
 // info from json_url to highlight/annotate it.
-blastradius = function (selector, svg_url, json_url, br_state) {
+lookuponterra = function (selector, svg_url, json_url, br_state) {
 
     // TODO: remove scale.
     scale = null
@@ -517,7 +517,7 @@ blastradius = function (selector, svg_url, json_url, br_state) {
             svg.selectAll('g.edge')
                 .data(edges, function(d) { return d && d.svg_id || d3.select(this).attr("id"); });
 
-            // blast-radius --serve mode stuff. check for a zoom-in button as a proxy
+            // look-upon-terra --serve mode stuff. check for a zoom-in button as a proxy
             // for whether other facilities will be available.
             if (d3.select(selector + '-zoom-in')) {
                 var zin_btn      = document.querySelector(selector + '-zoom-in');
@@ -555,7 +555,7 @@ blastradius = function (selector, svg_url, json_url, br_state) {
                         svg_url  = svg_url.split('?')[0];
                         json_url = json_url.split('?')[0];
 
-                        blastradius(selector, build_uri(svg_url, state.params), build_uri(json_url, state.params), br_state);
+                        lookuponterra(selector, build_uri(svg_url, state.params), build_uri(json_url, state.params), br_state);
                     }
                 }
 
@@ -573,7 +573,7 @@ blastradius = function (selector, svg_url, json_url, br_state) {
                     var dl            = document.createElement("a");
                     document.body.appendChild(dl);
                     dl.setAttribute("href", svg_data_url);
-                    dl.setAttribute("download", "blast-radius.svg");
+                    dl.setAttribute("download", "look-upon-terra.svg");
                     dl.click();
                 }
                 download_btn.addEventListener('click', handle_download);
@@ -648,4 +648,4 @@ blastradius = function (selector, svg_url, json_url, br_state) {
         });   // end json success callback
     });       // end svg scuccess callback
 
-}             // end blastradius()
+}             // end lookuponterra()

@@ -1,8 +1,8 @@
 version: '3.7'
 services:
 
-  blastradius:
-    image: 28mm/blast-radius
+  lookuponterra:
+    image: 28mm/look-upon-terra
     cap_add:
       - SYS_ADMIN
     security_opt:

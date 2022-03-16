@@ -1,10 +1,10 @@
 # Blast Radius
 
-[![CircleCI](https://circleci.com/gh/28mm/blast-radius/tree/master.svg?style=svg)](https://circleci.com/gh/28mm/blast-radius/tree/master)
+[![CircleCI](https://circleci.com/gh/28mm/look-upon-terra/tree/master.svg?style=svg)](https://circleci.com/gh/28mm/look-upon-terra/tree/master)
 [![PyPI version](https://badge.fury.io/py/BlastRadius.svg)](https://badge.fury.io/py/BlastRadius)
 
 [terraform]: https://www.terraform.io/
-[examples]: https://28mm.github.io/blast-radius-docs/
+[examples]: https://28mm.github.io/look-upon-terra-docs/
 
 _Blast Radius_ is a tool for reasoning about [Terraform][] dependency graphs
 with interactive visualizations.
@@ -16,7 +16,7 @@ Use _Blast Radius_ to:
 * __Reason__ about relationships between resources and evaluate changes to them
 * __Interact__ with the diagram below (and many others) [in the docs][examples]
 
-![screenshot](doc/blastradius-interactive.png)
+![screenshot](doc/lookuponterra-interactive.png)
 
 ## Prerequisites
 
@@ -31,14 +31,14 @@ The fastest way to get up and running with *Blast Radius* is to install it with
 `pip` to your pre-existing environment:
 
 ```sh
-pip install blastradius
+pip install lookuponterra
 ```
 
 Once installed just point *Blast Radius* at any initialized *Terraform*
 directory:
 
 ```sh
-blast-radius --serve /path/to/terraform/directory
+look-upon-terra --serve /path/to/terraform/directory
 ```
 
 And you will shortly be rewarded with a browser link http://127.0.0.1:5000/.
@@ -55,7 +55,7 @@ docker run --rm -it -p 5000:5000 \
   -v $(pwd):/data:ro \
   --security-opt apparmor:unconfined \
   --cap-add=SYS_ADMIN \
-  28mm/blast-radius
+  28mm/look-upon-terra
 ```
 
 A slightly more customized variant of this is also available as an example
@@ -107,7 +107,7 @@ $ docker run --rm -it -p 5000:5000 \
     -v $(pwd):/data:ro \
     --security-opt apparmor:unconfined \
     --cap-add=SYS_ADMIN \
-    28mm/blast-radius --serve stacks/beef
+    28mm/look-upon-terra --serve stacks/beef
 ```
 
 ## Embedded Figures
@@ -116,7 +116,7 @@ You may wish to embed figures produced with *Blast Radius* in other documents.
 You will need the following:
 
 1. An `svg` file and `json` document representing the graph and its layout.
-2. `javascript` and `css` found in `.../blastradius/server/static`
+2. `javascript` and `css` found in `.../lookuponterra/server/static`
 3. A uniquely identified DOM element, where the `<svg>` should appear.
 
 You can read more details in the [documentation](doc/embedded.md)
@@ -138,12 +138,12 @@ The development of *Blast Radius* is documented in a series of
 * [part 4](https://28mm.github.io/notes/d3-terraform-graphs-4): search, pan/zoom, prune-to-selection, docker.
 
 A catalog of example *Terraform* configurations, and their dependency graphs
-can be found [here](https://28mm.github.io/blast-radius-docs/).
+can be found [here](https://28mm.github.io/look-upon-terra-docs/).
 
-* [AWS two-tier architecture](https://28mm.github.io/blast-radius-docs/examples/terraform-provider-aws/two-tier/)
-* [AWS networking (featuring modules)](https://28mm.github.io/blast-radius-docs/examples/terraform-provider-aws/networking/)
-* [Google two-tier architecture](https://28mm.github.io/blast-radius-docs/examples/terraform-provider-google/two-tier/)
-* [Azure load-balancing with 2 vms](https://28mm.github.io/blast-radius-docs/examples/terraform-provider-azurem/2-vms-loadbalancer-lbrules/)
+* [AWS two-tier architecture](https://28mm.github.io/look-upon-terra-docs/examples/terraform-provider-aws/two-tier/)
+* [AWS networking (featuring modules)](https://28mm.github.io/look-upon-terra-docs/examples/terraform-provider-aws/networking/)
+* [Google two-tier architecture](https://28mm.github.io/look-upon-terra-docs/examples/terraform-provider-google/two-tier/)
+* [Azure load-balancing with 2 vms](https://28mm.github.io/look-upon-terra-docs/examples/terraform-provider-azurem/2-vms-loadbalancer-lbrules/)
 
 These examples are drawn primarily from the `examples/` directory distributed
 with various *Terraform* providers, and aren't necessarily ideal. Additional

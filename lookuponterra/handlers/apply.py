@@ -3,9 +3,9 @@ import re
 import json
 
 # 1st party libraries
-from blastradius.graph import Graph, Node, Edge
-from blastradius.handlers.dot import DotNode
-from blastradius.util import Re
+from lookuponterra.graph import Graph, Node, Edge
+from lookuponterra.handlers.dot import DotNode
+from lookuponterra.util import Re
 
 class Apply(Graph):
     def __init__(self, filename):

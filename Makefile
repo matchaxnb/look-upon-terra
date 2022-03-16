@@ -6,8 +6,8 @@
 # TODO: add tests.
 #
 
-CATEGORIES_JSON = ./blastradius/server/static/js/categories.json
-CATEGORIES_JS   = ./blastradius/server/static/js/categories.js
+CATEGORIES_JSON = ./lookuponterra/server/static/js/categories.json
+CATEGORIES_JS   = ./lookuponterra/server/static/js/categories.js
 
 .PHONY: clean
 clean:
@@ -23,13 +23,13 @@ dist:
 # build docker image
 .PHONY: docker
 docker:
-	-docker build -t 28mm/blast-radius .
+	-docker build -t 28mm/look-upon-terra .
 
 # push pypi and docker images to public repos
 .PHONY: publish
 publish:
 	-twine upload dist/*
-	-docker push 28mm/blast-radius:latest
+	-docker push 28mm/look-upon-terra:latest
 
 # rebuild categories.js from upstream docs
 .PHONY: categories
